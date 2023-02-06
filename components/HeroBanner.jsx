@@ -1,5 +1,6 @@
 import React from 'react'
 import Link from 'next/link'
+import Image from 'next/image';
 import { useNextSanityImage } from 'next-sanity-image';
 import { client } from '../lib/client';
 
@@ -18,7 +19,7 @@ const HeroBanner = ({ heroBanner }) => {
         <h3 className='text-8xl font-bold text-indigo-800 mt-5 uppercase'>{heroBanner.largeText1}</h3>
             <h3 className='font-extrabold text-7xl text-indigo-800' >{heroBanner.largeText2}</h3>
         <h3 className='text-4xl font-bold mt-10 text-indigo-600 '>{heroBanner.midText2}</h3>
-        <img
+        <Image
           {...useNextSanityImage(client, heroBanner.image[0])}
           // style={{ width: '100%', height: 'auto' }} // layout="responsive" prior to Next 13.0.0
 			    // sizes="(max-width: 800px) 100vw, 800px" 

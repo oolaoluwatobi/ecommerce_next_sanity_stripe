@@ -1,5 +1,6 @@
 import React from 'react'
 import Link from 'next/link'
+import Image from 'next/image';
 import { useNextSanityImage } from 'next-sanity-image';
 import { client } from '../lib/client';
 
@@ -16,7 +17,7 @@ const imageProps = useNextSanityImage(
       <Link href={`/product/${slug.current}`}>
         <div className='hover:scale-110 duration-500'>
           <div className='cursor-pointer bg-neutral-200 rounded-2xl'>
-            <img 
+            <Image 
               {...imageProps}
               width={250}
               height={250}

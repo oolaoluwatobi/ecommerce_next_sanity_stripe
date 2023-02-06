@@ -3,6 +3,7 @@ import Link from 'next/link';
 import { AiOutlineMinus, AiOutlinePlus, AiOutlineLeft, AiOutlineShopping } from 'react-icons/ai';
 import { TiDeleteOutline } from 'react-icons/ti';
 import toast from 'react-hot-toast';
+import Image from 'next/image';
 
 import { useStateContext } from '../context/StateContext';
 import { useNextSanityImage } from 'next-sanity-image';
@@ -68,7 +69,7 @@ const Cart = () => {
           {cartItems?.length >= 1 && cartItems?.map((item) => (
             <div className='product flex gap-7 pt-5 ' key={item._id}> 
 
-              <img
+              <Image
                 {...useNextSanityImage(client,item?.image[0])}
                 className='cart-product-image flex  p-5 w-48 h-48 bg-neutral-200 rounded-2xl '
               />

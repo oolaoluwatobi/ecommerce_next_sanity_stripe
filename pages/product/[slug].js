@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import Image from 'next/image';
 import { useNextSanityImage } from 'next-sanity-image';
 import { AiOutlineMinus, AiOutlinePlus, AiFillStar, AiOutlineStar } from 'react-icons/ai';
 
@@ -30,7 +31,7 @@ const ProductDetails = ({ product, products }) => {
         <div className='flex w-full  m-10 mt-14 gap-10'>
           <div>
             <div className='cursor-pointer bg-neutral-200 rounded-2xl hover:bg-red-500' >
-              <img 
+              <Image 
                 {...imageProps}
                 className='aspect-square rounded-2xl' 
                 alt="product-image"
@@ -41,7 +42,7 @@ const ProductDetails = ({ product, products }) => {
 
             <div className='flex gap-2 mt-5'>
               {image?.map((item, i) => (
-                <img
+                <Image
                   {...useNextSanityImage(client, image[i])}
                   key={i}
                   className={i === index ? 'rounded-lg w-16 h-16 cursor-pointer bg-red-500' : 'rounded-lg w-16 h-16 cursor-pointer bg-neutral-200'}  

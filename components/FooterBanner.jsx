@@ -1,5 +1,6 @@
 import React from 'react'
 import Link from 'next/link'
+import Image from 'next/image';
 import { useNextSanityImage } from 'next-sanity-image';
 import { client } from '../lib/client';
 
@@ -44,7 +45,7 @@ const FooterBanner = ({ footerBanner:
               <button className='bg-white text-red-500 border-none rounded-xl mt-5 text-lg font-extrabold cursor-pointer px-5 py-3  w-[150px] hover:scale-110 duration-500'>{buttonText}</button>
             </Link>
 
-            <img 
+            <Image 
               {...imageProps}
               className='absolute right-1/4 -top-1/4' 
               alt="special-offer-image" 
